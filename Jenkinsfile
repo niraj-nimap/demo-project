@@ -3,9 +3,8 @@ pipeline{
     stages{
         stage('Build'){
             steps{
-                python --version
-                pip --version 
-
+                sh "python --version
+                pip --version"
             }
         }
             }
