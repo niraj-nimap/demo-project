@@ -3,15 +3,14 @@ pipeline{
     stages{
         stage('Build'){
             steps{
-                sh "python --version
-                pip --version"
+                sh "python --version && pip --version"
             }
         }
             }
         }
         stage('Deploy'){
             steps{
-                pip install -r requirements.txt --break-system-packages
-                python app.py
+                sh "pip install -r requirements.txt --break-system-packages && python app.py"
+
             }
         }
